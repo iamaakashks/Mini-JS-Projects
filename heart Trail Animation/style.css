@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html, body{
+    height:100vh;
+    width:100vw;
+}
+body{
+    background-color:rgb(18, 18, 18);
+    overflow:hidden;
+}
+div{
+    background:url("./heart.png");
+    height:100px;
+    width:100px;
+    background-size:cover;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    animation-name:anime;
+    animation-duration:6s;
+    animation-timing-function:linear;
+}
+
+@keyframes anime{
+    0%{
+        transform:translate(-50%, -50%);
+        opacity:1;
+        filter:hue-rotate(0);
+    }
+    100%{
+        transform:translate(-50%, -3000%);
+        opacity:0;
+        filter:hue-rotate(360deg);
+    }
+}
